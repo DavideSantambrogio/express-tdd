@@ -6,7 +6,7 @@ Eseguiamo i seguenti test:
 - [x] createSlug dovrebbe ritornare una stringa con gli spazi sostituiti da -
 - [x] createSlug dovrebbe incrementare di 1 lo slug quando esiste già
 - [x] createSlug dovrebbe lanciare un errore in caso di titolo non presente o formato errato
-- [] createSlug dovrebbe lanciare un errore se manca l'array dei post
+- [x] createSlug dovrebbe lanciare un errore se manca l'array dei post
 Lavoriamo in ottica TDD, quindi prima scriviamo il singolo test, e dopo scriviamo il codice necessario per far superare il nostro test.
 Bonus
 Creiamo una classe Model la quale dovrà superare i seguenti test:

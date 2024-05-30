@@ -45,7 +45,6 @@ const generateSlug = (text) => {
 };
 
 // Funzione per creare uno slug univoco
-
 const createSlug = (title, allPosts) => {
     if (!title) {
         throw new Error('Title is missing');
@@ -53,6 +52,10 @@ const createSlug = (title, allPosts) => {
 
     if (typeof title !== 'string') {
         throw new Error('Title is not a string');
+    }
+
+    if (!Array.isArray(allPosts)) {
+        throw new Error('Post array is missing or invalid');
     }
 
     let slug = generateSlug(title); // Genera uno slug base

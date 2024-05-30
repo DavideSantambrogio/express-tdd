@@ -42,3 +42,22 @@ test('createSlug should throw an error when title is in incorrect format', () =>
         }).toThrow('Title is not a string');
     });
 });
+
+
+test('createSlug should throw an error if post array is missing or invalid', () => {
+    expect(() => {
+        createSlug('Test Post', null);
+    }).toThrow('Post array is missing or invalid');
+
+    expect(() => {
+        createSlug('Test Post', {});
+    }).toThrow('Post array is missing or invalid');
+
+    expect(() => {
+        createSlug('Test Post', 'invalid array');
+    }).toThrow('Post array is missing or invalid');
+
+    expect(() => {
+        createSlug('Test Post', 123);
+    }).toThrow('Post array is missing or invalid');
+});
