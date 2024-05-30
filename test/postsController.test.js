@@ -14,3 +14,15 @@ test('createSlug should return a string with spaces replaced by -', () => {
     const result = createSlug('Test Post', []);
     expect(result).toEqual('test-post');
 });
+
+test('createSlug should increment slug by 1 when already exists', () => {
+    const existingPosts = [
+        { title: 'Test Post', slug: 'test-post' },
+        { title: 'Test Post', slug: 'test-post-1' },
+        { title: 'Test Post', slug: 'test-post-2' },
+        { title: 'Test Post', slug: 'test-post-3' }
+    ];
+
+    const result = createSlug('Test Post', existingPosts);
+    expect(result).toEqual('test-post-4');
+});
