@@ -17,3 +17,17 @@ test('Instance of model should have a read method', () => {
     const model = new Model('data.json');
     expect(typeof model.read).toBe('function');
 });
+
+
+test('add should add new data to the file and return updated data array', () => {
+    // Arrange
+    const model = new Model('test-data.json');
+    const newData = { id: 1, name: 'New Data' };
+    
+    // Act
+    const result = model.add(newData);
+    
+    // Assert
+    expect(Array.isArray(result)).toBe(true);
+    expect(result).toContainEqual(newData);
+});
