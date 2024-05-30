@@ -40,7 +40,6 @@ const writeDataToFile = (filePath, data, callback) => {
 const generateSlug = (text) => {
     return text
         .toString()
-        
 };
 
 // Funzione per creare uno slug univoco
@@ -54,6 +53,9 @@ const createSlug = (title, allPosts) => {
     }
     return uniqueSlug;
 };
+
+exports.createSlug = createSlug;
+
 
 // Funzione per ottenere tutti i post
 exports.getPosts = (req, res) => {
