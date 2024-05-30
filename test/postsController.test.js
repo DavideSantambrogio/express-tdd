@@ -26,3 +26,19 @@ test('createSlug should increment slug by 1 when already exists', () => {
     const result = createSlug('Test Post', existingPosts);
     expect(result).toEqual('test-post-4');
 });
+
+test('createSlug should throw an error when title is missing', () => {
+    expect(() => {
+        createSlug(null, []);
+    }).toThrow('Title is missing');
+});
+
+test('createSlug should throw an error when title is in incorrect format', () => {
+    const invalidTitles = [123, {}, []];
+
+    invalidTitles.forEach(title => {
+        expect(() => {
+            createSlug(title, []);
+        }).toThrow('Title is not a string');
+    });
+});

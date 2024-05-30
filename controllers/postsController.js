@@ -45,7 +45,16 @@ const generateSlug = (text) => {
 };
 
 // Funzione per creare uno slug univoco
+
 const createSlug = (title, allPosts) => {
+    if (!title) {
+        throw new Error('Title is missing');
+    }
+
+    if (typeof title !== 'string') {
+        throw new Error('Title is not a string');
+    }
+
     let slug = generateSlug(title); // Genera uno slug base
     let uniqueSlug = slug;
     let count = 1;
