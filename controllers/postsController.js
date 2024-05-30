@@ -40,6 +40,8 @@ const writeDataToFile = (filePath, data, callback) => {
 const generateSlug = (text) => {
     return text
         .toString()
+        .toLowerCase()
+        .replace(' ', '-')
 };
 
 // Funzione per creare uno slug univoco
