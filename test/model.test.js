@@ -11,3 +11,9 @@ test('Instance of model should require JSON file name during instantiation', () 
     const model = new Model(fileName);
     expect(model.fileName).toBe(fileName);
 });
+
+
+test('Instance of model should have a read method', () => {
+    const model = new Model('data.json');
+    expect(typeof model.read).toBe('function');
+});
