@@ -10,7 +10,7 @@ Eseguiamo i seguenti test:
 Lavoriamo in ottica TDD, quindi prima scriviamo il singolo test, e dopo scriviamo il codice necessario per far superare il nostro test.
 Bonus
 Creiamo una classe Model la quale dovrà superare i seguenti test:
-- [] Model dovrebbe essere una classe (crea un'istanza della classe Model)
+- [x] Model dovrebbe essere una classe (crea un'istanza della classe Model)
 - [] L'istanza di model dovrebbe richiedere il nome del file json da usare in fase di creazione dell'istanza
 - [] L'istanza di model dovrebbe avere il metodo read
 - [] L'istanza di model dovrebbe avere il metodo add
