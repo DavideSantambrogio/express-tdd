@@ -31,3 +31,27 @@ test('add should add new data to the file and return updated data array', () => 
     expect(Array.isArray(result)).toBe(true);
     expect(result).toContainEqual(newData);
 });
+
+test('read should return an array', () => {
+    // Arrange
+    const model = new Model();
+
+    // Act
+    const result = model.read();
+
+    // Assert
+    expect(Array.isArray(result)).toBe(true);
+});
+
+test('add should add new data to the file and return updated data array', () => {
+    // Arrange
+    const model = new Model();
+    const newData = { id: 1, name: 'New Data' };
+
+    // Act
+    const result = model.add(newData);
+
+    // Assert
+    expect(Array.isArray(result)).toBe(true); // Verifica che il risultato sia un array
+    expect(result).toContainEqual(newData); // Verifica che il nuovo dato sia presente nell'array
+});
